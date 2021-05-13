@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Подарки</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&display=swap" rel="stylesheet" />
+
+    <!--Исключительно для браузеров от Microsoft: Internet Explorer EQUIV — для указания в теле страницы эквивалентов заголовков протокола HTTP.-->
+    <meta http-equiv="X-UA-Compatible" content="text/html" charset="UTF-8" />
+    <!--это механизм управления дополнительной информацией о ссылке в социальной сети Twitter, при помощи которого веб-мастер может управлять выводом заголовков, описаний и изображений для ссылок в твитах.-->
+    <meta name="twitter:site" content="NaTa" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Распродажа детской одежды" />
+    <meta name="twitter:description" content="Детская одежда" />
+    <meta name="twitter:image:src" content="url/Nata" />
+    <!--протокол Open Graph позволяет использовать возможности соцсетей при поисковой оптимизации-->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://" />
+    <meta property="og:title" content="Распродажа детской одежды" />
+    <meta property="og:description" content="Одежда для детей, детская одежда" />
+    <meta property="og:image" content="/Nata/img/child.png" />
+    <!--описание-->
+    <meta name="keywords" content="купить детскую одежду" />
+    <meta name="robots" content="index, follow, noodp" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="google" content="notranslate" />
+    <!-- отключает перевод страницы -->
+    <meta name="description" content="Одежда для детей - купить детскую одежду" />
+    <!--meta-тег полностью отключает работу плагина Skype для текущей страницы. Телефонные номера будут отображаться согласно стилям страницы.-->
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+    <!--При добавлении сайта на домашний экран в iOS задает имя иконки.-->
+    <meta name="apple-mobile-web-app-title" content="НаТа" />
+    <meta name="author" content="AnAs-T" />
+    <style>
+        /*Обнуление*/
+        * {
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+
+        :focus,
+        :active {
+            outline: none;
+        }
+
+        a:focus,
+        a:active {
+            outline: none;
+        }
+
+
+        body,
+        html {
+            height: 100%;
+            font-family: 'Comfortaa', cursive;
+            font-size: 100%;
+        }
+
+        .parallax {
+            /* The image used */
+            background-image: url('../img/sales.jpg');
+
+            /* Full height */
+            height: 80%;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            -size: cover;
+        }
+
+        .sidenav {
+            width: 100px;
+            cursor: pointer;
+            left: 0;
+        }
+
+        .sidenav__row {
+            display: flex;
+            height: 35vw;
+            flex-flow: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        .sidnav__element {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .img-thumbnail {
+            width: 60px;
+            margin: 10px;
+            border-radius: 15%;
+            box-shadow: 10px 12px 2px 1px rgba(0, 0, 255, 0.2);
+        }
+
+        .sidenav__element:hover::after {
+            content: attr(data-title);
+            /* Выводим текст */
+            color: #fff;
+            /* Цвет текста */
+            text-align: center;
+            /* Выравнивание текста по центру */
+            font-size: 18px;
+            /* Размер текста подсказки */
+            padding: 5px;
+            /* Поля */
+            border-radius: 15px;
+            background-color: rgb(148, 147, 147);
+            margin: 1em auto 2em;
+            /* Положение подсказки */
+            display: inline-block;
+            width: 150px;
+            position: absolute;
+            /* Абсолютное позиционирование */
+        }
+
+        .block {
+            background: radial-gradient(circle at right, #BEFDE6 55%, #FDBDE9 55%);
+            display: flex;
+            overflow: hidden;
+            padding: 20px;
+            justify-content: space-between;
+
+        }
+
+        
+        .photo {
+            float: left;
+            width: auto;
+            flex: 0 1 30%;
+        }
+
+        .photo img {
+            height: 230px;
+            margin: 10px;
+        }
+
+        #gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3vw;
+            color: red;
+            text-align: center;
+            margin: 20px auto;
+            font-weight: bold;
+        }
+
+        .footer {
+            background-color: #2e2c2c;
+        }
+
+        .footer__row {
+            display: flex;
+            height: 60px;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .footer__text {
+            color: #b2b2b3;
+            font-size: 0.5em;
+            letter-spacing: 0.3px;
+            margin-left: 2vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parallax"></div>
+    <div class="block">
+        <div class="sidenav">
+            <div class="sidenav__row">
+                <div class="sidenav__element" data-title="О нас">                  
+                    <a href="About.html"><img class="img-thumbnail" src="/img/logo.png" alt="О нас" /></a>
+                </div>
+                <div class="sidenav__element" data-title="Главная">
+                    <a href="index.html">
+                        <img class="img-thumbnail" src="img/home-world.png" alt="Главная" /></a>
+                </div>
+                <div class="sidenav__element" data-title="Подарки">
+                    <a href="Sales.html">
+                        <img class="img-thumbnail" src="/img/gift.png" alt="Подарки" /></a>
+                </div>
+                <div class="sidenav__element" data-title="Позвонить">
+                    <a href="tel:+79171800298" class="phone-number" title="Позвонить">
+                        <img class="img-thumbnail" src="/img/phone.png" alt="Позвонить" /></a>
+                </div>
+                <div class="sidenav__element" data-title="Написать">
+                    <a href="mailto:nata30cw@gmail.com" class="email-address" title="Написать"></a>
+                    <img class="img-thumbnail" src="/img/email.png" alt="Написать" />
+                </div>
+                <div class="sidenav__element" data-title="Чат">
+                    <a href="https://api.whatsapp.com/send?phone=9171800298" target="_blank" class="fa fa-viber" title="whats app">
+                        <img class="img-thumbnail" src="/img/chat.png" alt="Чат" /></a>
+                </div>
+                <div class="sidenav__element" data-title="Корзина">
+                    <img class="img-thumbnail" src="/img/basket.png" alt="Корзина" />
+                </div>
+            </div>
+        </div>
+        <div class="container">
+
+            <h1>Подарки и Скидки</h1>
+
+            <div id="gallery">
+
+                <figure class="photo">
+                    <a href="img/action_0.JPG" data-lightbox="roadtrip" data-title="Eagle"><img src="img/action_0.JPG"
+                            alt="Eagle" /></a>
+                    <figcaption></figcaption>
+                </figure>
+
+                <figure class="photo">
+                    <a href="img/action_1.JPG" data-lightbox="roadtrip" data-title="Pasta"><img src="img/action_1.JPG"
+                            alt="Pasta" /></a>
+                    <figcaption></figcaption>
+                </figure>
+
+                <figure class="photo">
+                    <a href="img/action_2.JPG" data-lightbox="roadtrip" data-title="Squash"><img src="img/action_2.JPG"
+                            alt="Squash" /></a>
+                    <figcaption></figcaption>
+                </figure>
+
+                <figure class="photo">
+                    <a href="img/action_3.JPG" data-lightbox="roadtrip" data-title="Hills"><img src="img/action_3.JPG"
+                            alt="Hills" /></a>
+                    <figcaption></figcaption>
+                </figure>
+
+                <figure class="photo">
+                    <a href="img/action_4.JPG" data-lightbox="roadtrip" data-title="Sandwiches"><img
+                            src="img/action_4.JPG" alt="Sandwiches" /></a>
+                    <figcaption></figcaption>
+                </figure>
+
+                <figure class="photo">
+                    <a href="img/action_5.JPG" data-lightbox="roadtrip" data-title="Plums"><img src="img/action_5.JPG"
+                            alt="Plums" /></a>
+                    <figcaption></figcaption>
+                </figure>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="parallax"></div>
+    <!-- !футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__row">
+                <div class="footer__text">
+                    <p>
+                        Все права защищены. Любое копирование и воспроизведение, в том
+                        числе частичное и в любых формах, без разрешения правообладателя
+                        запрещено. <br />© 2020. Разработка интернет-магазина
+                        An-As-T.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

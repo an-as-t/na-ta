@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>НаТа</title>
+    <link
+      rel="shortcut icon"
+      href="../img/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />    
+    
+    <!--протокол Open Graph позволяет использовать возможности соцсетей при поисковой оптимизации--
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://" />
+    <meta property="og:title" content="Распродажа детской одежды" />
+    <meta
+      property="og:description"
+      content="Одежда для детей, детская одежда"
+    />
+    <meta property="og:image" content="/Nata/img/child.png" /> -->
+    <!--описание-->
+    <meta name="keywords" content="купить детскую одежду" />
+    <meta name="robots" content="index, follow, noodp" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="google" content="notranslate" />
+    <!-- отключает перевод страницы -->
+    <meta
+      name="description"
+      content="Одежда для детей - купить детскую одежду"
+    />
+    <!--meta-тег полностью отключает работу плагина Skype для текущей страницы. Телефонные номера будут отображаться согласно стилям страницы.-->
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+    <!--При добавлении сайта на домашний экран в iOS задает имя иконки.-->
+    <meta name="apple-mobile-web-app-title" content="НаТа" />
+    <meta name="author" content="AnAs-T" />
+    <!--В iOS Safari выводит баннер с приложением в App Store.--
+        <meta name="apple-itunes-app" content="app-id=#"><--Чтобы добавить Smart App Banner в Apple Store--        
+        <meta name="google-play-app" content="app-id=#">!--В gogle play выводит баннер с приложением в GooglePlay.-->
+  <style>
+    /*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+/*--------------------*/
+
+body {
+  font-family: 'Comfortaa', cursive;
+  font-size: 100%;
+}
+/* *обертка */
+.wrapper {
+  overflow: hidden;
+  display: flex;
+}
+/* *контейнер */
+.container {
+  flex: 1 1 auto; 
+  margin-left: 100px;
+}
+.sidenav {
+  height: 100%;
+  width: 100px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #ffe70d;
+  padding-top: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.sidenav__element:hover::after {
+  content: attr(data-title); 
+  position: fixed; 
+  z-index: 1; 
+  color: #fff; 
+  text-align: center; 
+  font-size: 18px; 
+  padding: 5px; 
+  border-radius: 15px;
+  background-color: rgb(148, 147, 147);
+  margin: 20px auto; 
+  display: inline-block;
+  width: 150px;
+}
+.sidenav__row {
+  display: flex;
+  min-height: 100%;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 20px 0px 30px 0px;
+}
+.sidenav__element {
+  text-align: center;
+}
+.img-thumbnail {
+  width: 55%;
+  border-radius: 15%;
+  box-shadow: 10px 12px 2px 1px rgba(0, 0, 255, 0.2);
+}
+/* flex-контейнер */
+.block__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;  
+}
+
+/* flex-элемент */
+.block__element {  
+  text-align: center;
+}
+/* flex-элемент №1 */
+.block__element_1 {
+  flex: 0 0 40%;  
+}
+/* flex-элемент №2 */
+.block__element_2 {
+  flex: 1 1 auto; 
+  position: bottom right;
+}
+/* контент */
+#title__1 {
+  color: #1798e2;
+  text-shadow: rgb(121, 77, 77) 1px 1px;
+  font-size: 2vw;
+  margin: 1vw;
+  font-weight: bold;
+}
+
+#title__2 {
+  color: #ffe70d; /*!important*/
+  text-shadow: rgba(218, 215, 215, 6) 3px 5px 6px;
+  font-size: 5vw;
+  margin: 1vw;
+}
+
+#title__3 {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgb(134, 133, 133);
+  text-shadow: rgba(218, 215, 215, 6) 3px 5px 6px;
+  font-size: 3vw;
+  margin: 1vw;
+}
+@media (max-width: 980px) {
+  .block__content img {
+    height: 50vw;
+  }
+}
+
+.btn-item {
+  display: inline-block;
+  justify-content: center;
+}
+.btn {
+  width: 190px;
+  background-color: #ffe70d;
+  border-color: none;
+  color: white;
+  padding: 15px 25px;
+  float: left;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-shadow: rgba(218, 215, 215, 6) 2px 2px;
+  font-size: 1.2em;
+  line-height: 25px;
+  margin: 1rem;  
+}
+.btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn-group .btn:not(:last-child) {
+  border-right: none; 
+}
+@media (max-width: 980px) {    
+          
+    .btn {
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;        
+    }
+}
+
+.box8 {
+  -webkit-animation-duration: 9s;
+  animation-duration: 9s;
+  -webkit-animation-name: slidein;
+  animation-name: slidein;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;  
+}
+
+@-webkit-keyframes slidein {
+  from {
+    margin-left: 0%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 100%;
+    width: 100%;
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 0%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 100%;
+    width: 100%;
+  }
+}
+
+.footer {
+  background-color: #2e2c2c;
+}
+.footer__row {
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  align-items: center;  
+}
+.footer__text {
+  color: #b2b2b3;
+  font-size: 0.7em;
+  letter-spacing: 0.3px;
+  margin-left: 2vw;
+}
+  </style>
+  </head>
+  <body>
+    <div class="wrapper">    
+      <div class="container">
+        <div class="sidenav">
+          <div class="sidenav__row">
+            <div class="sidenav__element" data-title="О нас">           
+              <a href="About.html"
+                ><img
+                  class="img-thumbnail"
+                  src="/img/logo.png"
+                  alt="О нас"
+              /></a>
+            </div>
+            <div class="sidenav__element" data-title="Главная">
+              <a href="index.html">
+                <img class="img-thumbnail" src="img/home-world.png" alt="Главная" /></a>
+            </div>
+            <div class="sidenav__element" data-title="Подарки">
+              <a href="Sales.html">
+                <img
+                  class="img-thumbnail"
+                  src="img/gift.png"
+                  alt="Подарки"
+              /></a>
+            </div>
+            <div class="sidenav__element" data-title="Позвонить">
+              <a href="tel:+79171800298" class="phone-number" title="Позвонить">
+                <img
+                  class="img-thumbnail"
+                  src="img/phone.png"
+                  alt="Позвонить"
+              /></a>
+            </div>
+            <div class="sidenav__element" data-title="Написать">
+              <a
+                href="mailto:nata30cw@gmail.com"
+                class="email-address"
+                title="Написать"
+              ></a>
+              <img
+                class="img-thumbnail"
+                src="/img/email.png"
+                alt="Написать"
+              />
+            </div>
+            <div class="sidenav__element" data-title="Чат">
+              <a href="https://api.whatsapp.com/send?phone=9171800298" target="_blank" class="fa fa-viber" title="whats app">
+              <img class="img-thumbnail" src="/img/chat.png" alt="Чат"/></a>
+            </div>
+            <div class="sidenav__element" data-title="Корзина">
+              <img
+                class="img-thumbnail"
+                src="/img/basket.png"
+                alt="Корзина"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="box8">
+          <img src="/img/delivery.png" alt="Доставка" />
+        </div>
+        <!-- !блок1 -->
+        <!--  parent -->
+        <div class="block">
+          <!--  flex-container  -->
+          <div class="block__row">
+            <!--  flex-element  -->
+            <div class="block__element block__element_1">
+              <!--  content  -->
+              <div class="block__content">
+                <div id="title__1" class="title">распродажа детской одежды</div>
+                <div id="title__2" class="title">натуральное</div>
+                <div id="title__3" class="title">нижнее белье</div>
+                <div class="btn-item">
+                  <a href="catalog.html" id="btn_sale" class="btn" role="button"
+                    >Купить сейчас</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!--  flex-element  -->
+            <div class="block__element block__element_2">
+              <!--  content  -->
+              <div class="block__content">
+                <img src="/img/child.png" alt="Дети" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="block">
+          <div class="block__row">
+            <div class="block__element btn-group">
+              <a href="#" class="btn" role="button">0-3 месяцев</a>
+              <a href="#" class="btn" role="button">3-6 месяцев</a>
+              <a href="#" class="btn" role="button">6-12 месяцев</a>
+              <a href="#" class="btn" role="button">12-18 месяцев</a>
+              <a href="#" class="btn" role="button">18-24 месяцев</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- !футер -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__row">
+          <div class="footer__text">
+            <p>
+              Все права защищены. Любое копирование и воспроизведение, в том
+              числе частичное и в любых формах, без разрешения правообладателя
+              запрещено. <br />© 2020. Разработка интернет-магазина
+              An-As-T.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

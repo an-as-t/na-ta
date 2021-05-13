@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&display=swap" rel="stylesheet" />
+
+    <!--протокол Open Graph позволяет использовать возможности соцсетей при поисковой оптимизации--
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://" />
+    <meta property="og:title" content="Распродажа детской одежды" />
+    <meta
+      property="og:description"
+      content="Одежда для детей, детская одежда"
+    />
+    <meta property="og:image" content="/Nata/img/child.png" /> -->
+    <!--описание-->
+    <meta name="keywords" content="купить детскую одежду" />
+    <meta name="robots" content="index, follow, noodp" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="google" content="notranslate" />
+    <!-- отключает перевод страницы -->
+    <meta name="description" content="Одежда для детей - купить детскую одежду" />
+    <!--meta-тег полностью отключает работу плагина Skype для текущей страницы. Телефонные номера будут отображаться согласно стилям страницы.-->
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+    <!--При добавлении сайта на домашний экран в iOS задает имя иконки.-->
+    <meta name="apple-mobile-web-app-title" content="НаТа" />
+    <meta name="author" content="AnAs-T" />
+    <!--В iOS Safari выводит баннер с приложением в App Store.--
+        <meta name="apple-itunes-app" content="app-id=#"><--Чтобы добавить Smart App Banner в Apple Store--        
+        <meta name="google-play-app" content="app-id=#">!--В gogle play выводит баннер с приложением в GooglePlay.-->
+    <style>
+        /*Обнуление*/
+        * {
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+
+        :focus,
+        :active {
+            outline: none;
+        }
+
+        a:focus,
+        a:active {
+            outline: none;
+        }
+
+        nav,
+        footer,
+        header,
+        aside {
+            display: block;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            font-size: 100%;
+            line-height: 1;
+            font-size: 14px;
+            -ms-text-size-adjust: 100%;
+            -moz-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        input,
+        button,
+        textarea {
+            font-family: inherit;
+        }
+
+        input::-ms-clear {
+            display: none;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        button::-moz-focus-inner {
+            padding: 0;
+            border: 0;
+        }
+
+        a,
+        a:visited {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: inherit;
+            font-weight: inherit;
+        }
+
+        /*--------------------*/
+
+        body {
+            font-family: 'Comfortaa', cursive;
+            font-size: 100%;
+        }
+
+        /* *обертка */
+        .wrapper {
+            overflow: hidden;
+            display: flex;           
+        }
+
+        /* *контейнер */
+        .container {
+            flex: 1 1 auto;
+            margin-left: 100px;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 100px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #ffe70d;
+            padding-top: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .sidenav__element:hover::after {
+            content: attr(data-title);
+            position: fixed;
+            z-index: 1;
+            color: #fff;
+            text-align: center;
+            font-size: 18px;
+            padding: 5px;
+            border-radius: 15px;
+            background-color: rgb(148, 147, 147);
+            margin: 20px auto;
+            display: inline-block;
+            width: 150px;
+        }
+
+        .sidenav__row {
+            display: flex;
+            min-height: 100%;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            margin: 0;
+            padding: 20px 0px 30px 0px;
+        }
+
+        .sidenav__element {
+            text-align: center;
+        }
+
+        .img-thumbnail {
+            width: 55%;
+            border-radius: 15%;
+            box-shadow: 10px 12px 2px 1px rgba(0, 0, 255, 0.2);
+        }
+
+       .row { 
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 auto;  
+}
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  width: 40em; 
+}
+.arrow {   
+  line-height: 500px;  
+  margin: auto;
+  float: left;
+}
+
+.arrow img {
+  vertical-align: middle;  
+  width: 3vw;
+}
+.flip-box {
+  text-align: center;
+  width: 500px;
+  height: 500px; 
+  perspective: 1000px; 
+  float: right;
+  margin: 10px;  
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d; 
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front,
+.flip-box-back {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  padding: 10px;
+}
+
+.flip-box-front {
+  background-color: white;
+  color: rgb(106, 109, 129);
+  vertical-align: middle;
+  padding: 15px;
+  border: 15px solid rgb(214, 215, 218);
+}
+
+.flip-box-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+h2 {
+  margin: 20px;
+  font-size: 2vw;
+}
+
+.photo img {     
+  width: 100%;
+  height: 370px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 100%;
+}
+/* Для средних устройств (планшеты) *
+@media (min-width: 420px) {
+ .photo img {
+ max-width: 48%;
+ }
+}
+/* Для больших устройств (ноуты, пк) *
+@media (min-width: 760px) {
+ .photo img {
+ max-width: 24%;
+ }
+}
+*/
+.article,
+.material,
+.quantity,
+.size,
+.cost {
+  justify-content: space-between;
+  text-align: left;
+  margin: 10px;
+}
+
+.article_value,
+.material_value,
+.qantity_value,
+.size_value,
+.cost_value {
+  float: right;
+}
+
+.btn-item {
+  background-color: #ffe70d;
+  cursor: pointer;
+  border-radius: 15px;
+  text-align: center;
+  text-indent: 0;
+  padding: 15px;
+  margin: auto;
+  width: 50%;  
+}
+.btn {
+  color: white;
+  text-shadow: rgba(218, 215, 215, 6) 2px 2px;
+  text-decoration: none;
+  font-size: 1.5vw;
+}
+
+btn-item:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+        0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      }
+.btn-item .btn:not(:last-child) {
+  border-right: none;
+      /* Prevent double borders */} 
+        
+
+        .footer {
+            background-color: #2e2c2c;
+        }
+
+        .footer__row {
+            display: flex;
+            height: 60px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer__text {
+            color: #b2b2b3;
+            font-size: 0.7em;
+            letter-spacing: 0.3px;
+            margin-left: 2vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="sidenav">
+                <div class="sidenav__row">
+                    <div class="sidenav__element" data-title="О нас">
+                        <a href="about.html"><img class="img-thumbnail" src="img/logo.png" alt="О нас" /></a>
+                    </div>
+                    <div class="sidenav__element" data-title="Главная">
+                        <a href="index.html">
+                            <img class="img-thumbnail" src="img/home-world.png" alt="Главная" /></a>
+                    </div>
+                    <div class="sidenav__element" data-title="Подарки">
+                        <a href="sales.html">
+                            <img class="img-thumbnail" src="img/gift.png" alt="Подарки" /></a>
+                    </div>
+                    <div class="sidenav__element" data-title="Позвонить">
+                        <a href="tel:+79171800298" class="phone-number" title="Позвонить">
+                            <img class="img-thumbnail" src="img/phone.png" alt="Позвонить" /></a>
+                    </div>
+                    <div class="sidenav__element" data-title="Написать">
+                        <a href="mailto:nata30cw@gmail.com" class="email-address" title="Написать"></a>
+                        <img class="img-thumbnail" src="img/email.png" alt="Написать" />
+                    </div>
+                    <div class="sidenav__element" data-title="Чат">
+                        <a href="https://api.whatsapp.com/send?phone=9171800298" target="_blank" class="fa fa-viber"
+                            title="whats app">
+                            <img class="img-thumbnail" src="img/chat.png" alt="Чат" /></a>
+                    </div>
+                    <div class="sidenav__element" data-title="Корзина">
+                        <img class="img-thumbnail" src="img/basket.png" alt="Корзина" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!--!box1-->
+                <div class="box">
+                    <div class="arrow">
+                        <img src="img/arrow-download.png" alt="arrow">
+                    </div>
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                                <h2>Комплект</h2>
+                                <picture class="photo">
+                                    <img src="catalog/goods/a0001.jpg" alt="Комплект">
+                                </picture>
+                            </div>
+                            <div class="flip-box-back">
+                                <h2>Комплект</h2>
+                                <div class="article">Артикул: <span class="article_value">a0001</span>
+                                </div>
+                                <div class="material">Материал:<span class="material_value">Кулирная гладь</span>
+                                </div>
+                                <div class="quantity">Cостав<span class="qantity_value">100% хлопок</span>
+                                </div>
+                                <div class="size">Доступные размеры:<span class="size_value">74 / 80 / 86 / 92 / 98</span>
+                                </div>
+                                <div class="cost">Цена за штуку в упаковке:<span class="cost_value">190</span>
+                                </div>
+                                <div class="btn-item">
+                                    <a href="#" id="btn_sale" class="btn" role="button">В корзину</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--!box2-->
+                <div class="box">
+                    <div class="arrow">
+                        <img src="img/arrow-download.png" alt="arrow">
+                    </div>
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                                <h2>Комплект</h2>
+                                <picture class="photo">
+                                    <img src="catalog/goods/a0002.jpg" alt="Комплект">
+                                </picture>
+                            </div>
+                            <div class="flip-box-back">
+                                <h2>Комплект</h2>
+                                <div class="article">Артикул: <span class="article_value">a0001</span>
+                                </div>
+                                <div class="material">Материал:<span class="material_value">Кулирная гладь</span>
+                                </div>
+                                <div class="quantity">Cостав<span class="qantity_value">100% хлопок</span>
+                                </div>
+                                <div class="size">Доступные размеры:<span class="size_value">74 / 80 / 86 / 92 / 98</span>
+                                </div>
+                                <div class="cost">Цена за штуку в упаковке:<span class="cost_value">190</span>
+                                </div>
+                                <div class="btn-item">
+                                    <a href="#" id="btn_sale" class="btn" role="button">В корзину</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--!box3-->
+                <div class="box">
+                    <div class="arrow">
+                        <img src="img/arrow-download.png" alt="arrow">
+                    </div>
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                                <h2>Комплект</h2>
+                                <picture class="photo">
+                                    <img src="catalog/goods/a0003.jpg" alt="Комплект">
+                                </picture>
+                            </div>
+                            <div class="flip-box-back">
+                                <h2>Комплект</h2>
+                                <div class="article">Артикул: <span class="article_value">a0001</span>
+                                </div>
+                                <div class="material">Материал:<span class="material_value">Кулирная гладь</span>
+                                </div>
+                                <div class="quantity">Cостав<span class="qantity_value">100% хлопок</span>
+                                </div>
+                                <div class="size">Доступные размеры:<span class="size_value">74 / 80 / 86 / 92 / 98</span>
+                                </div>
+                                <div class="cost">Цена за штуку в упаковке:<span class="cost_value">190</span>
+                                </div>
+                                <div class="btn-item">
+                                    <a href="#" id="btn_sale" class="btn" role="button">В корзину</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--!box4-->
+                <div class="box">
+                    <div class="arrow">
+                        <img src="img/arrow-download.png" alt="arrow">
+                    </div>
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                                <h2>Комплект</h2>
+                                <picture class="photo">
+                                    <img src="catalog/goods/a0006.jpg" alt="Комплект">
+                                </picture>
+                            </div>
+                            <div class="flip-box-back">
+                                <h2>Комплект</h2>
+                                <div class="article">Артикул: <span class="article_value">a0001</span>
+                                </div>
+                                <div class="material">Материал:<span class="material_value">Кулирная гладь</span>
+                                </div>
+                                <div class="quantity">Cостав<span class="qantity_value">100% хлопок</span>
+                                </div>
+                                <div class="size">Доступные размеры:<span class="size_value">74 / 80 / 86 / 92 / 98</span>
+                                </div>
+                                <div class="cost">Цена за штуку в упаковке:<span class="cost_value">190</span>
+                                </div>
+                                <div class="btn-item">
+                                    <a href="#" id="btn_sale" class="btn" role="button">В корзину</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+        </div>
+    </div>
+    <!-- !футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__row">
+                <div class="footer__text">
+                    <p>
+                        Все права защищены. Любое копирование и воспроизведение, в том
+                        числе частичное и в любых формах, без разрешения правообладателя
+                        запрещено. <br />© 2020. Разработка интернет-магазина
+                        An-As-T.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
